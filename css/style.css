@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* SELECTORS TAGS */
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+ul {
+    list-style: none;
+}
+
+/* CLASSES TAGS */
+
+/* common classes */
+
+.footer {
+    flex-shrink: 0;
+}
+
+.container {
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+
+
+/* utilities */
+
+.d-flex {
+    display: flex;
+}
+.d-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
+}
+.flex-grow-1{
+    flex-grow: 1;
+}
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+
+/* padding and margin */
+
+
+
+
+/* main */
+
+.sidebar {
+    padding: 1rem;
+    flex-shrink: 0;
+    min-width: 250px;
+}
+.sidebar-logo {
+    min-height: 70px;
+}
+.sidebar-logo, .sidebar-menu, .sidebar-playlist, .sidebar-user {
+    padding: 1rem;
+}
+.header-container {
+    min-height: 70px;
+}
+.header-container, .body-container {
+    padding: 1.5rem 1rem;
+}
+
