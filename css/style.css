@@ -3,6 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    font-family: sans-serif;
+    
+}
+
+:root {
+    --primary: #000;
+    --primary-light: #282828;
+    --secondary:#141922;
+    --top-bar: #090b12;
+}
 /* SELECTORS TAGS */
 
 main {
@@ -12,6 +23,29 @@ main {
 }
 ul {
     list-style: none;
+}
+
+ul li a {
+    padding: .5rem .75rem;
+    display: inline-block;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: gray;
+}
+h1, h2, h3{
+    margin: .5rem 0;
+    color: white;
+}
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.2rem;
+}
+h3 {
+    font-size: .9rem;
 }
 
 /* CLASSES TAGS */
@@ -25,10 +59,46 @@ ul {
 .container {
     padding: 1rem;
     flex-shrink: 0;
+    position: relative;
 }
-
-
-
+.bgcolor-primary {
+    background-color: var(--primary);
+}
+.bgcolor-primary-light {
+    background-color: var(--primary-light);
+}
+.bgcolor-secondary {
+    background-color: var(--secondary);
+}
+.bgcolor-topbar {
+    background-color: var(--top-bar);
+}
+.text-white {
+    color: white;
+}
+.text-center {
+    text-align: center
+}
+.opacity-70 {
+    opacity: .7;
+}
+.text-right {
+    text-align: right;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+.btn {
+    padding: .5rem 1.5rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 2rem;
+    font-size: .7rem;
+}
+.btn-outline-light {
+    border: 1px solid white;
+    background-color: transparent;
+}
 /* utilities */
 
 .d-flex {
@@ -47,17 +117,22 @@ ul {
 .flex-shrink-0 {
     flex-shrink: 0;
 }
+.align-self-center {
+    align-self: center;
+}
 
 
 /* padding and margin */
 
+.padding-left-hf {
+    padding-left: .5rem;
+}
 
 
 
 /* main */
 
 .sidebar {
-    padding: 1rem;
     flex-shrink: 0;
     min-width: 250px;
 }
@@ -73,4 +148,49 @@ ul {
 .header-container, .body-container {
     padding: 1.5rem 1rem;
 }
+.header-container {
+    min-height: 70px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:var(--top-bar);
+}
+.square {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: .5rem;
 
+}
+.sidebar-playlist button {
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    cursor: pointer;
+}
+.sidebar-playlist button span {
+    align-self: center;
+    padding-left: 1rem;
+    font-weight: bold;
+    color: gray;
+}
+.container-playlist {
+    overflow: hidden;
+}
+.container-playlist ul li a {
+    padding-left: 0;
+}
+.profile {
+    width: 40px;
+    padding: .5rem;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    background-color: gray;
+    border-radius: 50%;
+}
+.profile img {
+    object-fit: cover;
+}

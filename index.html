@@ -15,25 +15,54 @@
         <div class="main-container flex-grow-1 d-flex">
                 
             <!-- sidebar container -->
-                    <div class="sidebar d-flex-column">
-                        <div class="sidebar-logo " style="background-color: rgb(180, 226, 43);">
-
+                    <div class="sidebar bgcolor-primary d-flex-column">
+                        <div class="sidebar-logo " >
+                            <img src="img/logo.svg" alt="logo spotify">
                         </div>
-                        <div class="sidebar-menu " style="background-color: rgb(43, 89, 226);">
-
+                        <div class="sidebar-menu ">
+                            <ul>
+                                <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Cerca</a></li>
+                                <li><a href="#"><i class="fa-solid fa-layer-group"></i> La tua libreria</a></li>
+                            </ul>
                         </div>
-                        <div class="sidebar-playlist flex-grow-1" style="background-color: rgb(43, 226, 162);">
-
+                        <div class="sidebar-playlist flex-grow-1">
+                            <h2>PLAYLIST</h2>
+                            <button>
+                                <div class="square"><i class="fa-solid fa-plus"></i></div>
+                                <span>Crea Playlist</span>
+                            </button>
+                            <div class="container-playlist">
+                                <ul>
+                                    <li><a href="#">Nome Playlist</a></li>
+                                    <li><a href="#">Nome Playlist</a></li>
+                                    <li><a href="#">Nome Playlist</a></li>
+                                    <li><a href="#">Nome Playlist</a></li>
+                                    <li><a href="#">Nome Playlist</a></li>
+                                    <li><a href="#">Nome Playlist</a></li>
+                                    <li><a href="#">Nome Playlist</a></li>
+                                    <li><a href="#">Nome Playlist</a></li>
+                                    <li><a href="#">Nome Playlist</a></li>
+                                    <li><a href="#">Nome Playlist</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="sidebar-user " style="background-color: rgb(226, 43, 43);">
-
+                        <div class="sidebar-user ">
+                            <a href="#"><i class="fa-solid fa-circle-arrow-down"></i>  Installa app</a>
+                            <hr style="border-color: gray; margin: .5rem 0;">
+                            <div class="user d-flex">
+                                <div class="profile">
+                                    <img src="img/profile.svg" alt="profile image">
+                                </div>
+                                <span class="text-white align-self-center padding-left-hf">John Doe</span>
+                            </div>
                         </div>
                     </div>
 
             <!-- container body -->
                     <div class="container flex-grow-1 d-flex-column" style="background-color: rgb(2, 131, 23);">
-                        <div class="header-container" style="background-color: rgb(120, 131, 2);">
-
+                        <div class="header-container opacity-70 text-right">
+                            <a href="#" class="btn btn-outline-light text-uppercase">effettua l'upgrade</a>
                         </div>
                         <div class="body-container flex-grow-1" style="background-color: rgb(234, 148, 27);">
 
