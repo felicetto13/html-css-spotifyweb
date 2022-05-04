@@ -33,6 +33,10 @@ ul li a {
 a {
     text-decoration: none;
     color: gray;
+    cursor: pointer;
+}
+a:hover {
+    color: white;
 }
 h1, h2, h3{
     margin: .5rem 0;
@@ -48,13 +52,57 @@ h3 {
     font-size: .9rem;
 }
 
+.sidebar-playlist button:hover .square {
+    background-color: white;
+}
+.sidebar-playlist button:hover .square i {
+    color: var(--primary);
+}
+.sidebar-playlist button:hover span {
+    color: white;
+}
 /* CLASSES TAGS */
 
 /* common classes */
-
+.menu ul li{
+    position: relative;
+}
+.btn:hover {
+    padding: 1rem 3rem;
+    text-decoration: underline;
+    color: white;
+}
+.active {
+    position: absolute;
+    bottom: -5px;
+    left: calc(100%/3);
+    width: calc(100%/3);
+    height: 0;
+    background-color: rgb(212, 255, 0);
+}
+.menu ul li:hover .active{
+    height: 2px;
+}
 .footer {
     flex-shrink: 0;
     background-color: var(--primary-light);
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+.overlay a {
+    font-size: 5rem;
+    color: white;
+}
+.card:hover .overlay {
+    display: flex;
+    align-items: center;
 }
 .logo-small {
     display: none;
@@ -118,6 +166,7 @@ h3 {
     width: 100%;
     aspect-ratio: 1/1;
     margin: 0 auto;
+    position: relative;
 }
 .card-image img {
     max-width: 100%;
@@ -276,6 +325,9 @@ h3 {
 .artist-container .card .card-image img {
     border-radius: 50%;
 }
+.artist-container .card .card-image .overlay {
+    border-radius: 50%;
+}
 .col-footer {
     max-width: 200px;
     width: 100%;
@@ -327,6 +379,23 @@ h3 {
     background-color: lightgrey;
     position: relative;
     border-radius: 3px;
+}
+.point-scroll {
+    display: none;
+}
+.progressive-bar .bar:hover .progress, .volume-bar .bar:hover .volume {
+    background-color: rgb(212, 255, 0);
+}
+.progressive-bar .bar:hover .point-scroll, .volume-bar .bar:hover .point-scroll {
+    display: block;
+    position: absolute;
+    left: 30%;
+    top: calc((-15px + 3px) / 2);
+    height: 15px;
+    width: 15px;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: lightgrey;
 }
 .progress, .volume {
     width: 30%;
@@ -392,8 +461,8 @@ h3 {
         max-width: 40px;
     }
     .sidebar-mobile {
-        display: block;
-        max-width: 50px;
+        display: flex;
+        min-width: 50px;
     }
     .sidebar-mobile .sidebar-user {
         position: absolute;
@@ -401,10 +470,21 @@ h3 {
         left: 0;
         max-width: 50px;
     }
+    .sidebar-mobile:hover {}
+    
     .sidebar {
         position: absolute;
         left: -100%;
         transition: all 1s ease-in-out;
+    }
+    .sidebar-logo, .sidebar-menu, .sidebar-playlist, .sidebar-user {
+        padding: .5rem;
+    }
+    .sidebar-menu ul li a {
+        padding: 0.5rem 0;
+    }
+    .sidebar-logo {
+        min-height: unset;
     }
     .header-container {
         left: 50px;
