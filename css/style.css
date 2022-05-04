@@ -57,7 +57,6 @@ h3 {
 }
 
 .container {
-    flex-shrink: 0;
     position: relative;
 }
 .bgcolor-primary {
@@ -168,9 +167,6 @@ h3 {
 .header-container {
     min-height: 70px;
     position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
     background-color:var(--top-bar);
 }
 .square {
@@ -215,9 +211,11 @@ h3 {
     padding: 1rem .5rem;
     font-size: .9rem;
 }
+.recently-played {
+    padding-left: 2rem;
+}
 .container-recently-played {
     padding: 1rem;
-    overflow-x: scroll;
-    width: 90%;
-    max-width: none;
+    overflow: scroll hidden;
+    width: 95%;
 }
