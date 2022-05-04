@@ -14,16 +14,17 @@
         <!-- main container -->
         <div class="main-container flex-grow-1 d-flex">
                 
-            <!-- sidebar container -->
+            <!-- sidebar container desktop and tablet-->
                     <div class="sidebar bgcolor-primary d-flex-column">
                         <div class="sidebar-logo " >
-                            <img src="img/logo.svg" alt="logo spotify">
+                            <img src="img/logo.svg" class="logo-big" alt="logo spotify">
+                            <img src="img/logo-small.svg" class="logo-small" alt="logo spotify">
                         </div>
                         <div class="sidebar-menu ">
                             <ul>
-                                <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-                                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Cerca</a></li>
-                                <li><a href="#"><i class="fa-solid fa-layer-group"></i> La tua libreria</a></li>
+                                <li><a href="#"><img src="img/home.svg" class="logo-menu" alt="home"> Home</a></li>
+                                <li><a href="#"><img src="img/search.svg" class="logo-menu" alt="search"> Cerca</a></li>
+                                <li><a href="#"><img src="img/libreria.svg" class="logo-menu" alt="library"> La tua libreria</a></li>
                             </ul>
                         </div>
                         <div class="sidebar-playlist flex-grow-1">
@@ -59,9 +60,39 @@
                         </div>
                     </div>
 
+                    <!-- sidebar mobile -->
+
+                    <div class="sidebar-mobile bgcolor-primary d-flex-column">
+                        <div class="sidebar-logo " >
+                            <img src="img/logo-small.svg" class="logo-small" alt="logo spotify">
+                        </div>
+                        <div class="sidebar-menu ">
+                            <ul>
+                                <li><a href="#"><img src="img/home.svg" class="logo-menu" alt="home"></a></li>
+                                <li><a href="#"><img src="img/search.svg" class="logo-menu" alt="search"></a></li>
+                                <li><a href="#"><img src="img/libreria.svg" class="logo-menu" alt="library"></a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-playlist flex-grow-1">
+                            
+                            <button>
+                                <div class="square"><i class="fa-solid fa-plus"></i></div>
+                                <span>Crea Playlist</span>
+                            </button>
+                        </div>
+
+                        <div class="sidebar-user d-flex-column">
+                            <a href="#" class="align-self-center padding-1 "><i class="fa-solid fa-circle-arrow-down"></i></a>
+                            <div class="user d-flex">
+                                <div class="profile">
+                                    <img src="img/profile.svg" alt="profile image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             <!-- container body -->
                     <div class="container bgcolor-secondary flex-grow-1 d-flex-column">
-                        <div class="header-container opacity-70 text-right">
+                        <div class="header-container opacity-70 justify-end d-flex">
                             <a href="#" class="btn btn-outline-light text-uppercase">effettua l'upgrade</a>
                         </div>
                         <div class="body-container flex-grow-1">
@@ -263,7 +294,7 @@
                         <li><i class="fa-solid fa-volume-high"></i></li>
                     </ul>
                 </div>
-                <div class="col-2 flex-grow-1 align-self-center">
+                <div class="flex-grow-1 align-self-center">
                     <div class="volume-bar">
                         <div class="bar">
                             <div class="volume"></div>
