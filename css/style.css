@@ -99,6 +99,7 @@ h3 {
 }
 .card {
     max-width: 200px;
+    flex-shrink: 0;
 }
 .card-image {
     width: 100%;
