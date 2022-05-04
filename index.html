@@ -33,7 +33,7 @@
                                 <span>Crea Playlist</span>
                             </button>
                             <div class="container-playlist">
-                                <ul>
+                                <ul class="d-flex-column flex-grow-1">
                                     <li><a href="#">Nome Playlist</a></li>
                                     <li><a href="#">Nome Playlist</a></li>
                                     <li><a href="#">Nome Playlist</a></li>
@@ -75,9 +75,9 @@
                                     <li><a href="#" class="text-uppercase">scopri</a></li>
                                 </ul>
                             </div>
-                            <div class="recently-played">
+                            <div class="recently-played ">
                                 <h1 class="text-white">Recently played</h1>
-                                <div class="container-recently-played d-flex gap-1">
+                                <div class="container-recently-played horizontal-scroll d-flex gap-1">
                                     <div class="card">
                                         <div class="card-image">
                                             <img src="img/metal_lifting.jpg" alt="metal lifting">
@@ -161,42 +161,116 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="suggested-container">
+                                <h1>Creato per John Doe</h1>
+                                <span>Più ascolti, più accurati saranno i suggerimenti.</span>
+                                <div class="horizontal-scroll d-flex gap-1">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <img src="img/radar.jpeg" alt="release radar">
+                                        </div>
+                                        <div class="card-title text-center">
+                                            <h2>Release Radar</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <img src="img/mixdaily.jpeg" alt="rdaily mix">
+                                        </div>
+                                        <div class="card-title text-center">
+                                            <h2>Daily Mix 1</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="artist-container">
+                                <h1>Artisti più popolari</h1>
+                                <span>Più ascolti, più accurati saranno i suggerimenti.</span>
+                                <div class="horizontal-scroll d-flex gap-1">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <img src="img/youg.jpeg" alt="lana del rey">
+                                        </div>
+                                        <div class="card-title text-center">
+                                            <h2>Lana del Rey</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <img src="img/einaudi.jpeg" alt="Ludovico Einaudi">
+                                        </div>
+                                        <div class="card-title text-center">
+                                            <h2>Ludovico Einaudi</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
         </div>
 
         <!-- main footer -->
-        <div class="footer d-flex" style="background-color: rgb(2, 131, 94);">
+        <div class="footer d-flex">
 
             <!-- left sidebar -->
-            <div class="sidebar">
-                <div class="col-1"></div>
-                <div class="col-2 flex-grow-1"></div>
-                <div class="col-1"></div>
+            <div class="col-footer d-flex">
+                <div class="col-1 align-self-center">
+                        <img src="img/sinister.jpeg" alt="sinister">
+                </div>
+                <div class="col-2 align-self-center flex-grow-1">
+                    <div class="card-title">
+                        <h2>Sinister</h2>
+                        <span>Brano Nome</span>
+                    </div>
+                </div>
+                <div class="col-1 align-self-center text-gray">
+                    <ul class="d-flex gap-1">
+                        <li><i class="fa-regular fa-heart"></i></li>
+                        <li><i class="fa-regular fa-folder"></i></li>
+                    </ul>
+                </div>
             </div>
 
             <!-- central content player -->
-            <div class="container flex-grow-1">
+            <div class="container flex-grow-1 text-white">
                 <div class="btn-controls">
-                    <ul class="d-flex">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul class="d-flex gap-2 justify-center">
+                        <li class="align-self-center"><i class="fa-solid fa-shuffle"></i></li>
+                        <li class="align-self-center"><i class="fa-solid fa-backward-step"></i></li>
+                        <li class="align-self-center"><i class="fa-regular fa-circle-play"></i></li>
+                        <li class="align-self-center"><i class="fa-solid fa-forward-step"></i></li>
+                        <li class="align-self-center"><i class="fa-solid fa-rotate-right"></i></li>
                     </ul>
                 </div>
                 <div class="progressive-container d-flex">
                     <div class="progressive-time">0:25</div>
-                    <div class="progressive-bar flex-grow-1"></div>
+                    <div class="progressive-bar align-self-center flex-grow-1">
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                        
+                    </div>
                     <div class="total-time">4:35</div>
                 </div>
             </div>
 
             <!-- right sidebar -->
-            <div class="sidebar">
-                <div class="col-1"></div>
-                <div class="col-2"></div>
+            <div class="col-footer d-flex text-white">
+                <div class="align-self-center">
+                    <ul class="d-flex gap-1">
+                        <li><i class="fa-solid fa-list"></i></li>
+                        <li><i class="fa-solid fa-desktop"></i></li>
+                        <li><i class="fa-solid fa-volume-high"></i></li>
+                    </ul>
+                </div>
+                <div class="col-2 flex-grow-1 align-self-center">
+                    <div class="volume-bar">
+                        <div class="bar">
+                            <div class="volume"></div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </main>

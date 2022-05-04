@@ -54,6 +54,7 @@ h3 {
 
 .footer {
     flex-shrink: 0;
+    background-color: var(--primary-light);
 }
 
 .container {
@@ -73,6 +74,9 @@ h3 {
 }
 .text-white {
     color: white;
+}
+.text-gray {
+    color: gray;
 }
 .text-center {
     text-align: center
@@ -112,6 +116,7 @@ h3 {
 }
 .card-subtitle {
     color: gray;
+    font-size: .8rem;
 }
 /* utilities */
 
@@ -137,7 +142,12 @@ h3 {
 .gap-1 {
     gap:1rem;
 }
-
+.gap-2 {
+    gap: 2rem;
+}
+.space-between {
+    justify-content: space-between;
+}
 
 /* padding and margin */
 
@@ -148,7 +158,9 @@ h3 {
 
 
 /* main */
-
+.main-container {
+    overflow: hidden;
+}
 .sidebar {
     flex-shrink: 0;
     min-width: 250px;
@@ -156,19 +168,26 @@ h3 {
 .sidebar-logo {
     min-height: 70px;
 }
+.sidebar-playlist {
+    overflow: hidden;
+}
 .sidebar-logo, .sidebar-menu, .sidebar-playlist, .sidebar-user {
     padding: 1rem;
-}
-.header-container {
-    min-height: 70px;
 }
 .header-container {
     padding: 1.5rem 1rem;
 }
 .header-container {
     min-height: 70px;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 250px;
     background-color:var(--top-bar);
+}
+.body-container {
+    margin-top: 70px;
+    overflow: auto;
 }
 .square {
     background-color: lightgrey;
@@ -192,7 +211,11 @@ h3 {
     color: gray;
 }
 .container-playlist {
-    overflow: hidden;
+    height: 100%;
+}
+.container-playlist ul{
+    overflow: auto;
+    height: 100%;
 }
 .container-playlist ul li a {
     padding-left: 0;
@@ -212,11 +235,78 @@ h3 {
     padding: 1rem .5rem;
     font-size: .9rem;
 }
-.recently-played {
+.body-container {
     padding-left: 2rem;
 }
-.container-recently-played {
-    padding: 1rem;
+.horizontal-scroll {
+    padding: 1rem 0;
     overflow: scroll hidden;
     width: 95%;
 }
+.recently-played, .suggested-container, .artist-container {
+    padding: 1rem 0;
+}
+.suggested-container span, .artist-container span {
+    color: gray;
+    font-size: .8rem;
+}
+.artist-container .card .card-image img {
+    border-radius: 50%;
+}
+.col-footer {
+    max-width: 350px;
+    width: 100%;
+}
+.col-1 {
+    padding: .5rem;
+    max-width: 25%;
+}
+
+.col-1 img{
+    max-width: 100%;
+    object-fit: cover;
+}
+.col-2 {
+    flex-basis: auto;
+    padding: 0 .5rem;
+}
+.col-2 .card-title h2 {
+    font-size: .9rem;
+    margin: 0;
+}
+.col-2 .card-title span {
+    font-size: .7rem;
+    color: gray;
+}
+.footer .container {
+    padding: 0 6rem;
+}
+.btn-controls, .progressive-container {
+    padding: 1rem 0;
+}
+.btn-controls {
+    font-size: 1.5rem;
+}
+.btn-controls .fa-circle-play {
+    font-size: 2.2rem;
+}
+
+.progressive-bar, .volume-bar {
+    padding: 0 3rem;
+}
+.bar {
+    max-width: 100%;
+    width: 100%;
+    height: 3px;
+    background-color: lightgrey;
+    position: relative;
+}
+.progress, .volume {
+    width: 20%;
+    background-color: gray;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
